@@ -42,3 +42,24 @@ dotfiles/
 
 - **Claude Code** → `CLAUDE.md` を自動参照（`policy/master/` + `policy/agents/claude-code.md`）
 - **Gemini CLI** → `~/.gemini/GEMINI.md` に `policy/master/` + `policy/agents/gemini-cli.md` の内容を反映
+
+## セットアップ手順（新しいマシン）
+
+### 1. リポジトリをクローン
+```bash
+git clone git@github.com:yakborg/dotfiles.git ~/dotfiles
+```
+
+### 2. シンボリックリンクを作成
+```bash
+ln -s ~/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
+ln -s ~/dotfiles/GEMINI.md ~/.gemini/GEMINI.md
+```
+
+### 前提条件
+- `~/.claude/` が存在すること（Claude Code を一度起動すれば自動作成される）
+- `~/.gemini/` が存在すること（Gemini CLI を一度起動すれば自動作成される）
+- `~/.gemini/GEMINI.md` が空または存在しない場合は削除してからリンクを作成する
+```bash
+rm ~/.gemini/GEMINI.md
+```
