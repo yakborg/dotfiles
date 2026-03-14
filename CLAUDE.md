@@ -6,6 +6,10 @@
 
 以下のファイルを必ず読み込んでから作業を開始してください。
 
+### 全AI共通ルール
+
+- [`policy/global.md`](policy/global.md) — 回答スタイル・環境概要・禁止事項
+
 ### 共通ルール（すべてのエージェント共通）
 
 - [`policy/master/00-principles.md`](policy/master/00-principles.md) — シェル・ランタイム・ツール管理の基本方針
