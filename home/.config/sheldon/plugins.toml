@@ -1,0 +1,36 @@
+# ▼ ここが抜けていました。これを書くとデフォルト動作が有効になります
+shell = "zsh"
+
+# --- 1. 遅延読み込みツール (zsh-defer) ---
+# 他のプラグインより先に通常読み込み(source)します
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+apply = ["source"]
+
+# --- 2. テンプレート定義 ---
+# "defer" と指定されたら zsh-defer を経由して読み込む設定
+[templates]
+defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
+
+# --- 3. 各種プラグイン ---
+
+# 入力予測 (これは即時反映したいので defer を使いません)
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+
+# シンタックスハイライト (起動後に読み込み = defer)
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+# 補完強化
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = ["defer"]
+
+# Git機能 (Oh My Zsh)
+[plugins.git]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/git"
+apply = ["defer"]

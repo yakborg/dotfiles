@@ -1,0 +1,9 @@
+[tools]
+deno = "latest"
+neovim = "latest"
+node = "latest"
+python = "latest"
+
+[tasks.pip-setup]
+run = "pip install google-auth google-api-python-client"
+description = "Install required Python packages for GCP/GA4 MCP"
