@@ -4,6 +4,9 @@ set -e
 DOTFILES="$HOME/dotfiles"
 HOME_DIR="$DOTFILES/home"
 
+# パッケージインストール
+source "$DOTFILES/scripts/install-packages.sh"
+
 echo "🔗 Creating symlinks..."
 
 # .config ディレクトリの確保
