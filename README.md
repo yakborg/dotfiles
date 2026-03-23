@@ -26,7 +26,9 @@
 dotfiles/
 ├── CLAUDE.md                        # Claude Code 向け指示書
 ├── README.md                        # このファイル
-├── install.sh                       # シンボリックリンク一括作成スクリプト
+├── install.sh                       # セットアップ一括実行スクリプト
+├── scripts/
+│   └── install-packages.sh          # apt パッケージインストール
 ├── home/                            # ホームディレクトリの設定ファイル群
 │   ├── .zshrc
 │   ├── .zshenv
