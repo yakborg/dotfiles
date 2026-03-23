@@ -26,6 +26,15 @@
 dotfiles/
 ├── CLAUDE.md                        # Claude Code 向け指示書
 ├── README.md                        # このファイル
+├── install.sh                       # シンボリックリンク一括作成スクリプト
+├── home/                            # ホームディレクトリの設定ファイル群
+│   ├── .zshrc
+│   ├── .zshenv
+│   └── .config/
+│       ├── mise/
+│       │   └── config.toml
+│       └── sheldon/
+│           └── plugins.toml
 └── policy/
     ├── master/                      # 全エージェント共通ルール
     │   ├── 00-principles.md         # シェル・ランタイム・基本方針
@@ -50,7 +59,14 @@ dotfiles/
 git clone git@github.com:yakborg/dotfiles.git ~/dotfiles
 ```
 
-### 2. シンボリックリンクを作成
+### 2. zsh/mise/sheldon 設定のシンボリックリンクを一括作成
+```bash
+./install.sh
+```
+
+`home/` 以下のファイルを `~/` に一括でシンボリックリンクします（`.zshrc`, `.zshenv`, `mise/config.toml`, `sheldon/plugins.toml`）。
+
+### 3. AIエージェント設定のシンボリックリンクを作成
 ```bash
 ln -s ~/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
 ln -s ~/dotfiles/GEMINI.md ~/.gemini/GEMINI.md
@@ -63,3 +79,6 @@ ln -s ~/dotfiles/GEMINI.md ~/.gemini/GEMINI.md
 ```bash
 rm ~/.gemini/GEMINI.md
 ```
+
+### 注意事項
+- `~/.secrets/env` はdotfiles管理外。新マシンでは別途手動で作成が必要
