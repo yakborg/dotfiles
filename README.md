@@ -37,6 +37,8 @@ dotfiles/
 │       │   └── config.toml
 │       └── sheldon/
 │           └── plugins.toml
+├── templates/
+│   └── CLAUDE.md.tmpl               # 新規プロジェクト用 CLAUDE.md テンプレート
 └── policy/
     ├── master/                      # 全エージェント共通ルール
     │   ├── 00-principles.md         # シェル・ランタイム・基本方針
