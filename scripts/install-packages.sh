@@ -9,6 +9,7 @@ APT_PACKAGES=(
   gh
   curl
   unzip
+  bubblewrap
   build-essential
   tmux
   vim

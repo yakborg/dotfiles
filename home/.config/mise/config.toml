@@ -1,6 +1,6 @@
 [tools]
 deno = "latest"
 neovim = "latest"
-node = "latest"
+node = "lts"
 python = "latest"
 

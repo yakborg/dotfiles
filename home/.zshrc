@@ -29,6 +29,8 @@ eval "$(starship init zsh)"
 setopt HIST_IGNORE_DUPS   # 履歴の重複を無視
 setopt print_eight_bit    # 日本語ファイル名の文字化け防止
 alias ls='ls --color=auto' # lsコマンドに色をつける
+alias claude='claude --enable-auto-mode'
+alias codex='codex --full-auto'
 
 # --- シークレット読み込み ---
 [[ -f ~/.secrets/env/yakborg.secret ]] && source ~/.secrets/env/yakborg.secret
