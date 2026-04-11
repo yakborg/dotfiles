@@ -12,6 +12,7 @@ APT_PACKAGES=(
   bubblewrap
   build-essential
   tmux
+  fzf
   vim
   zsh
 )
