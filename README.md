@@ -14,7 +14,7 @@
 
 ### mise 管理ツール
 
-- deno, neovim, node, python（すべて latest）
+- deno, fzf, gh, neovim, node, python, tmux（node は lts、それ以外は latest）
 
 ### sheldon プラグイン
 
